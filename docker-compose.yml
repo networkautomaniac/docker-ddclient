@@ -1,0 +1,14 @@
+---
+version: "3.9"
+services:
+  ddclient:
+    image: linuxserver/ddclient:latest
+    container_name: ddclient
+    hostname: ddclient
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=America/Indiana/Indianapolis
+    volumes:
+      - ./config:/config
+    restart: unless-stopped
