@@ -8,16 +8,7 @@ services:
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
-      - TZ=America/Indiana/Indianapolis
+      - TZ=${TZ}
     volumes:
       - ./config:/config
-    networks:
-      - ddclient
     restart: unless-stopped
-networks:
-  ddclient:
-    name: ddclient
-    ipam:
-      config:
-        - subnet: "172.16.0.0/24"
-          gateway: "172.16.0.1"
