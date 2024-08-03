@@ -9,5 +9,5 @@ services:
       - PGID=${PGID}
       - TZ=${TZ}
     volumes:
-      - ./config:/config
+      - ./config/ddclient.conf:/config/ddclient.conf
     restart: unless-stopped
