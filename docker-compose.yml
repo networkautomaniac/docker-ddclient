@@ -1,13 +1,13 @@
 ---
 services:
   ddclient:
-    image: linuxserver/ddclient:latest
-    container_name: ddclient
-    hostname: ddclient
+    image: "linuxserver/ddclient:latest"
+    container_name: "ddclient"
+    hostname: "ddclient"
     environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
-      - TZ=${TZ}
+      - "PUID=${PUID}"
+      - "PGID=${PGID}"
+      - "TZ=${TZ}"
     volumes:
-      - ./config/ddclient.conf:/config/ddclient.conf
-    restart: unless-stopped
+      - "./config/ddclient.conf:/config/ddclient.conf"
+    restart: "unless-stopped"
